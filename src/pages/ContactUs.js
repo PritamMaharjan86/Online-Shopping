@@ -1,7 +1,7 @@
 import React from 'react'
-import Navigation from '../components/Navigation';
+import Navigation from '../components/Navigation'
 
-const Home = () => {
+const ContactUs = () => {
     return (
         <div>
             <Navigation />
@@ -10,4 +10,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default ContactUs

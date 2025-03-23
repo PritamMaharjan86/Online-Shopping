@@ -1,12 +1,12 @@
 import './App.css';
-import Home from './pages/Home';
+import Routing from './routes/Routing';
+import { Fragment } from 'react';
 
 function App() {
   return (
-   <>
-   <Home />
-   
-   </>
+    <Fragment>
+      <Routing />
+    </Fragment>
   );
 }
 
