@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: "Acme";
+    src: url("../src/fonts/Acme-Regular.ttf");
+  }
