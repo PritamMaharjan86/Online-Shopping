@@ -7,8 +7,8 @@ const Navigation = () => {
         <div>
             <div class="mx-auto flex  max-w-full items-center gap-x-4 bg-white p-4 shadow-lg outline outline-black/5 dark:bg-yellow-300 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
                 <div>
-                    <div className="ml-5 text-3xl font-bold text-black uppercase font-Acme">Primswed</div>
-                    <p className="ml-10 text-black text-sm uppercase font-Acme">Your tech store</p>
+                    <div className="ml-5 text-3xl font-bold text-black uppercase font-Russo">Primswed</div>
+                    <p className="ml-10 text-black text-sm uppercase font-Russo">Your tech store</p>
                 </div>
             </div>
             <div className="mx-auto flex max-w-full items-center gap-x-4 bg-black p-3 shadow-lg outline">

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily:
     {
-      Acme: ['Acme', 'sans-serif'],
+      Russo: ['Russo', 'sans-serif'],
 
     },
     extend: {},
