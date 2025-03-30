@@ -6,8 +6,12 @@ const Home = () => {
         <div>
             <Navigation />
 
+            
+
         </div>
     )
+
+
 }
 
 export default Home;
