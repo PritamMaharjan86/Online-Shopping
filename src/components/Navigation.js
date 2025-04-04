@@ -31,31 +31,31 @@ const Navigation = () => {
 
     return (
         <div>
-            <div class="mx-auto flex  max-w-full items-center gap-x-4  p-4 outline outline-black/5 bg-purple-300 shadow-none dark:-outline-offset-1 dark:outline-white/10">
+            <div class="mx-auto flex h-20 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow-300 shadow-none dark:-outline-offset-1 dark:outline-white/10">
                 <div>
-                    <div className="ml-5 text-3xl font-bold text-black uppercase font-Russo">Primswed</div>
+                    <div className="ml-5 text-3xl font-bold text-black uppercase font-Russo">JB HI-FI</div>
                     <p className="ml-10 text-black text-sm uppercase font-Russo">Your tech store</p>
                 </div>
 
-                <div className='ml-auto flex items-center gap-x-10 mr-8'>
+                <div className='ml-auto flex items-center gap-x-8 mr-8'>
                     <div className='flex flex-col items-center'>
-                        <Button label={<RiUserLine className='text-2xl' />} onClick={handleUser}></Button>
-                        <span>Login</span>
+                        <Button label={<RiUserLine className='text-xl' />} onClick={handleUser}></Button>
+                        <span className='text-sm'>Login</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                        <Button label={<RiStore2Line className='text-2xl' />} onClick={handleStores}></Button>
-                        <span>Stores</span>
+                        <Button label={<RiStore2Line className='text-xl' />} onClick={handleStores}></Button>
+                        <span className='text-sm'>Stores</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                        <Button label={<RiShoppingCart2Line className='text-2xl' />} onClick={handleCart}></Button>
-                        <span>Cart</span>
+                        <Button label={<RiShoppingCart2Line className='text-xl' />} onClick={handleCart}></Button>
+                        <span className='text-sm'>Cart</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                        <Button label={<RiSignpostLine className='text-2xl' />} onClick={handleCart}></Button>
-                        <span>Delivery</span>
+                        <Button label={<RiSignpostLine className='text-xl' />} onClick={handleCart}></Button>
+                        <span className='text-sm'>Delivery</span>
                     </div>
 
                 </div>
