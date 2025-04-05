@@ -4,10 +4,18 @@ module.exports = {
   theme: {
     fontFamily:
     {
-      Russo: ['Russo', 'sans-serif'],
+      Title: ['Title', 'sans-serif'],
+      Heading: ['Heading', 'sans-serif'],
 
     },
-    extend: {},
+    extend: {
+      colors:
+      {
+        yellow: '#ffec0f',
+      }
+
+
+    },
   },
   plugins: [],
 }

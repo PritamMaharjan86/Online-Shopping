@@ -4,6 +4,9 @@
 
 
 @font-face {
-    font-family: "Russo";
-    src: url("../src/fonts/RussoOne-Regular.ttf");
-  }
+    font-family: "Title";
+    src: url("../src/fonts/JB-Callout.ttf") format("truetype"); }
+
+    @font-face {
+        font-family: "Heading";
+        src: url("../src/fonts/JB-Heading.ttf") format("truetype"); }

@@ -31,10 +31,11 @@ const Navigation = () => {
 
     return (
         <div>
-            <div class="mx-auto flex h-20 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow-300 shadow-none dark:-outline-offset-1 dark:outline-white/10">
+            <div class="mx-auto flex h-20 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow shadow-none dark:-outline-offset-1 dark:outline-white/10">
                 <div>
-                    <div className="ml-5 text-3xl font-bold text-black uppercase font-Russo">JB HI-FI</div>
-                    <p className="ml-10 text-black text-sm uppercase font-Russo">Your tech store</p>
+                    <div className="ml-8 text-3xl font-bold text-black uppercase font-Heading">PS Store</div>
+                    <a className="ml-12 text-black text-sm uppercase font-Title font-normal">all in one tech</a>
+                   
                 </div>
 
                 <div className='ml-auto flex items-center gap-x-8 mr-8'>
@@ -60,8 +61,8 @@ const Navigation = () => {
 
                 </div>
             </div>
-            <div className="mx-auto flex max-w-full items-center gap-x-4 bg-black p-2 shadow-lg outline">
-                <ul className='text-white text-lg flex justify-center space-x-12 m-1 ml-5 font-Russo'>
+            <div className="mx-auto flex max-w-full items-center gap-x-4 bg-black p-2 h-10 shadow-lg outline">
+                <ul className='text-white text-md flex justify-center space-x-12 m-1 ml-5 font-bold '>
                     <Link
                         to="/home">
                         Products
