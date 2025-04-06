@@ -8,8 +8,6 @@ import { RiSignpostLine } from "react-icons/ri";
 
 
 
-
-
 const Navigation = () => {
 
 
@@ -35,24 +33,26 @@ const Navigation = () => {
                 <div>
                     <div className="ml-8 text-3xl font-bold text-black uppercase font-Heading">PS Store</div>
                     <a className="ml-12 text-black text-sm uppercase font-Title font-normal">all in one tech</a>
-                   
+
                 </div>
 
                 <div className='ml-auto flex items-center gap-x-8 mr-8'>
-                    <div className='flex flex-col items-center'>
-                        <Button label={<RiUserLine className='text-xl' />} onClick={handleUser}></Button>
-                        <span className='text-sm'>Login</span>
-                    </div>
+                    <Link to="/login">
+                        <div className='flex flex-col items-center'>
+                            <Button label={<RiUserLine className='text-xl' />} />
+                            <span className='text-sm'>Login</span>
+                        </div>
+                    </Link>
 
                     <div className='flex flex-col items-center'>
                         <Button label={<RiStore2Line className='text-xl' />} onClick={handleStores}></Button>
                         <span className='text-sm'>Stores</span>
                     </div>
 
-                    <div className='flex flex-col items-center'>
-                        <Button label={<RiShoppingCart2Line className='text-xl' />} onClick={handleCart}></Button>
+                    <Link to="/cart" className="flex flex-col items-center no-underline text-inherit">
+                        <Button label={<RiShoppingCart2Line className='text-xl' />} />
                         <span className='text-sm'>Cart</span>
-                    </div>
+                    </Link>
 
                     <div className='flex flex-col items-center'>
                         <Button label={<RiSignpostLine className='text-xl' />} onClick={handleCart}></Button>

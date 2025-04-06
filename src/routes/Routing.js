@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from '../pages/Home';
 import ContactUs from '../pages/ContactUs';
+import Cart from '../pages/Cart';
 
 
 const Routing = () => {
@@ -12,6 +13,7 @@ const Routing = () => {
                     <Route exact path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/contact" element={<ContactUs />} />
+                    <Route path='/cart' element={<Cart />} />
                 </Routes>
 
             </BrowserRouter>
