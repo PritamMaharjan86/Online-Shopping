@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import Button from '../components/Button';
 import Navigation from '../components/Navigation';
 import { CartContext } from '../context/Cartcontext';
+import { MdDeleteForever } from "react-icons/md";
+import { IoIosAdd } from "react-icons/io";
+import { LuMinus } from "react-icons/lu";
+
 
 const Cart = () => {
-    const { cartItems } = useContext(CartContext);
-  
-   
+    const { cartItems, addToCart, decreaseQuantity, removeFromCart } = useContext(CartContext);
 
     return (
         <div>
@@ -30,13 +32,27 @@ const Cart = () => {
                                 <div className="flex-1">
                                     <p className="font-semibold">{item.name}</p>
                                     <p className="text-gray-600">${item.price}</p>
+                                    <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
                                 </div>
+
                                 <Button
-                                    className="bg-red-600 text-white p-2 rounded-md"
-                                    label="Remove"
-                                    onClick={}></Button>
+                                    className='text-2xl'
+                                    label={<IoIosAdd />}
+                                    onClick={() => addToCart(item)}
+                                />
+
+                                <Button
+                                    className='text-xl'
+                                    label={<LuMinus />}
+                                    onClick={() => decreaseQuantity(item)}
+                                />
+
+                                <Button
+                                    className="text-2xl text-red-600 p-4"
+                                    label={<MdDeleteForever />}
+                                    onClick={() => removeFromCart(item)}
+                                />
                             </div>
-                            
                         ))}
 
                         <Button
@@ -49,6 +65,7 @@ const Cart = () => {
             </div>
         </div>
     );
+
 };
 
 export default Cart;
