@@ -52,16 +52,41 @@ const Cart = () => {
                                     label={<MdDeleteForever />}
                                     onClick={() => removeFromCart(item)}
                                 />
+
+
                             </div>
+
+
                         ))}
 
-                        <Button
-                            className="bg-black text-white p-4 w-60 rounded-md mt-6"
-                            label="Continue Shopping"
-                            onClick={() => window.location.href = '/home'}
-                        />
+                        <div className='grid grid-cols-2 p-1'>
+                            <span className='text-xl font-bold '>Subtotal</span>
+                            <span className='text-xl font-bold'>$500</span>
+
+                        </div>
                     </div>
                 )}
+
+
+
+                <div className='grid grid-cols-2 w-1/2 mx-auto gap-10'>
+
+
+                    <Button
+                        className="bg-black text-white p-4 w-60 rounded-md mt-6"
+                        label="Continue Shopping"
+                        onClick={() => window.location.href = '/home'}
+                    />
+
+
+                    <Button
+                        className="bg-green-600 text-white p-4 w-60 rounded-md mt-6"
+                        label="Checkout"
+                        onClick={() => window.location.href = '/home'}
+                    />
+
+                </div>
+
             </div>
         </div>
     );
