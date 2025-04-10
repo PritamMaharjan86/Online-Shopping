@@ -54,12 +54,17 @@ const Navigation = () => {
 
                     <div className='relative'>
                         <Link to="/cart" className="flex flex-col items-center no-underline text-inherit">
-                        <span className='absolute translate-x-2/3 -translate-y-2/4 bg-red-600 text-xs rounded-full w-4 h-4 text-white font-bold text-center'>{cartItems.length}</span>
+                            {cartItems.length > 0 && (
+                                <span className='absolute top-0 right-0 translate-x-1/3 -translate-y-1/2 bg-red-600 text-xs rounded-full w-4 h-4 text-white font-bold text-center'>
+                                    {cartItems.length}
+                                </span>
+                            )}
+
                             <Button label={<RiShoppingCart2Line className='text-xl' />} />
                             <span className='text-sm'>Cart</span>
                         </Link>
-
                     </div>
+
 
                     <div className='flex flex-col items-center'>
                         <Button label={<RiSignpostLine className='text-xl' />} onClick={handleCart}></Button>

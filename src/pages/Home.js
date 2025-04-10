@@ -10,7 +10,7 @@ const Home = () => {
         {
             id: 1,
             name: "BenQ TK700 4K HDR Gaming Projector",
-            price: 2395,
+            price: 2395.93 ,
             image: "https://res.cloudinary.com/dedpvue13/image/upload/v1743488671/benq_monitor_rcqlfx.webp",
             logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1743590808/benq2951.logowik.com_ntllss.webp"
         },
