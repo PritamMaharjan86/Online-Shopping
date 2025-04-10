@@ -1,48 +1,102 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Navigation from '../components/Navigation';
 import Button from '../components/Button';
 import { CartContext } from '../context/Cartcontext';
 
 const Home = () => {
-    const [buttonText, setButtonText] = React.useState("Add to Cart");
-    const [isAdded, setIsAdded] = React.useState(false);
     const { addToCart } = useContext(CartContext);
 
-    const product = {
-        id: 1,
-        name: "BenQ TK700 4K HDR Gaming Projector",
-        price: 2395,
-        image: "https://res.cloudinary.com/dedpvue13/image/upload/v1743488671/benq_monitor_rcqlfx.webp"
-    };
+    const products = [
+        {
+            id: 1,
+            name: "BenQ TK700 4K HDR Gaming Projector",
+            price: 2395,
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1743488671/benq_monitor_rcqlfx.webp",
+            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1743590808/benq2951.logowik.com_ntllss.webp"
+        },
+        {
+            id: 2,
+            name: "Philips NeoPix 113 Projector",
+            price: 147,
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744186762/philips_rxbtti.webp",
+            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744189986/shopping_website/logos/Phillips_Logo_Design_History_Evolution_16_1024x1024_dcgmdl.webp"
+        },
+        {
+            id: 3,
+            name: "Samsung the Freestyle Projector",
+            price: 1295,
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744186796/samsung_tgae71.webp",
+            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744190203/shopping_website/logos/Samsung-logo_mjoc1q.jpg"
+        },
+        {
+            id: 4,
+            name: "Nebula Capsule 3 Laser Google TV Projector",
+            price: 1595,
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp",
+            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191457/shopping_website/logos/nebula-by-kryolan-logo-vector_fcx50u.png"
+        }
 
-    const handleCart = () => {
+    ];
+
+    const [buttonStates, setButtonStates] = useState({});
+
+    const handleCart = (product) => {
         addToCart(product);
-        setButtonText("Added");
-        setIsAdded(true);
+        setButtonStates(prev => ({
+            ...prev,
+            [product.id]: { text: "Added", isAdded: true }
+        }));
+
         setTimeout(() => {
-            setButtonText("Add to Cart");
-            setIsAdded(false);
+            setButtonStates(prev => ({
+                ...prev,
+                [product.id]: { text: "Add to Cart", isAdded: false }
+            }));
         }, 2000);
     };
 
     return (
         <div>
             <Navigation />
-            <div className='grid grid-cols-4 gap-4 p-8 '>
-                <div className='border-1 w-10/12 h-1/1 rounded-sm m-2 p-4 pb-10 bg-white shadow-lg'>
-                    <div className='flex flex-col items-center '>
-                        <img className='w-40 h-40' src={product.image} />
-                    </div>
-                    <div className="text-left">
-                        <img className="w-12 h-8" src="https://res.cloudinary.com/dedpvue13/image/upload/v1743590808/benq2951.logowik.com_ntllss.webp" />
-                    </div>
-                    <p className='font-bold '>{product.name}</p>
-                    <div className='flex flex-col items-center'>
-                        <p className='border-2 rounded-sm m-10 text-center w-40 p-2 text-2xl min-h-full items-center bg-yellow font-Title text-red-600 border-black shadow-[2px_2px_0px_0px_rgb(0,0,0)]'>${product.price}</p>
-                        <Button className={`text-white font-bold p-4 w-60 ${isAdded ? 'bg-green-700' : 'bg-black'}`} label={buttonText} onClick={handleCart}></Button>
-                    </div>
-                </div>
+            <div className='flex flex-wrap justify-center items-center gap-3 p-6'>
+                {products.map(product => {
+                    const state = buttonStates[product.id] || { text: "Add to Cart", isAdded: false };
+                    return (
+                        <div
+                            key={product.id}
+                            className='w-[300px] h-[500px] flex flex-col justify-between rounded-md p-4 bg-white shadow-lg'
+                        >
+                            {/* Image */}
+                            <div className='flex justify-center items-center'>
+                                <img className='w-40 h-40 object-contain' src={product.image} alt={product.name} />
+                            </div>
+
+                            {/* Logo */}
+                            <div className='text-left'>
+                                <div className='w-12 h-10 flex items-center justify-center overflow-hidden'>
+                                    <img src={product.logo} alt="Brand Logo" className='object-contain w-full h-full' />
+                                </div>
+                            </div>
+
+                            {/* Product name */}
+                            <p className='font-bold text-lg'>{product.name}</p>
+
+                            {/* Price + Button */}
+                            <div className='flex flex-col items-center mt-4 p-4 '>
+                                <p className='border-2 rounded-sm mb-4 text-center w-40 p-2 text-2xl bg-yellow font-Title text-red-600 border-black shadow-[2px_2px_0px_0px_rgb(0,0,0)]'>
+                                    ${product.price}
+                                </p>
+                                <Button
+                                    className={`text-white font-bold p-4 w-64 m-3 ${state.isAdded ? 'bg-green-700' : 'bg-black'}`}
+                                    label={state.text}
+                                    onClick={() => handleCart(product)}
+                                />
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
+
         </div>
     );
 };

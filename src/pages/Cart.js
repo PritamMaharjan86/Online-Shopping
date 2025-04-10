@@ -9,6 +9,7 @@ import { LuMinus } from "react-icons/lu";
 
 const Cart = () => {
     const { cartItems, addToCart, decreaseQuantity, removeFromCart } = useContext(CartContext);
+    const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
     return (
         <div>
@@ -59,33 +60,33 @@ const Cart = () => {
 
                         ))}
 
-                        <div className='grid grid-cols-2 p-1'>
+                        
+                        <div className='flex justify-end gap-10 items-center mt-4'>
                             <span className='text-xl font-bold '>Subtotal</span>
-                            <span className='text-xl font-bold'>$500</span>
-
+                            <span className='text-xl font-bold'>${subtotal.toFixed(2)}</span>
                         </div>
+                        <span className='flex justify-end mt-1 text-sm'>Including GST. Shipping calculated at checkout  </span>
+
+                        <div className='flex justify-end gap-10 items-center mt-4'>
+
+
+                            <Button
+                                className="bg-black text-white p-4 w-60 rounded-md mt-6"
+                                label="Continue Shopping"
+                                onClick={() => window.location.href = '/home'}
+                            />
+
+
+                            <Button
+                                className="bg-green-600 text-white p-4 w-60 rounded-md mt-6"
+                                label="Checkout"
+                                onClick={() => window.location.href = '/home'}
+                            />
+
+                        </div>    
                     </div>
                 )}
 
-
-
-                <div className='grid grid-cols-2 w-1/2 mx-auto gap-10'>
-
-
-                    <Button
-                        className="bg-black text-white p-4 w-60 rounded-md mt-6"
-                        label="Continue Shopping"
-                        onClick={() => window.location.href = '/home'}
-                    />
-
-
-                    <Button
-                        className="bg-green-600 text-white p-4 w-60 rounded-md mt-6"
-                        label="Checkout"
-                        onClick={() => window.location.href = '/home'}
-                    />
-
-                </div>
 
             </div>
         </div>
