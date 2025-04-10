@@ -11,6 +11,7 @@ const Cart = () => {
     const { cartItems, addToCart, decreaseQuantity, removeFromCart } = useContext(CartContext);
     const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
+
     return (
         <div>
             <Navigation />
@@ -60,10 +61,12 @@ const Cart = () => {
 
                         ))}
 
-                        
+
                         <div className='flex justify-end gap-10 items-center mt-4'>
                             <span className='text-xl font-bold '>Subtotal</span>
-                            <span className='text-xl font-bold'>${subtotal.toFixed(2)}</span>
+                            <span className='text-xl font-bold'>
+                                ${subtotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                            </span>
                         </div>
                         <span className='flex justify-end mt-1 text-sm'>Including GST. Shipping calculated at checkout  </span>
 
@@ -83,7 +86,7 @@ const Cart = () => {
                                 onClick={() => window.location.href = '/home'}
                             />
 
-                        </div>    
+                        </div>
                     </div>
                 )}
 

@@ -5,10 +5,13 @@ import { RiShoppingCart2Line } from "react-icons/ri";
 import { RiUserLine } from "react-icons/ri";
 import { RiStore2Line } from "react-icons/ri";
 import { RiSignpostLine } from "react-icons/ri";
+import { CartContext } from '../context/Cartcontext';
 
 
 
 const Navigation = () => {
+
+    const { cartItems } = React.useContext(CartContext);
 
 
 
@@ -49,10 +52,14 @@ const Navigation = () => {
                         <span className='text-sm'>Stores</span>
                     </div>
 
-                    <Link to="/cart" className="flex flex-col items-center no-underline text-inherit">
-                        <Button label={<RiShoppingCart2Line className='text-xl' />} />
-                        <span className='text-sm'>Cart</span>
-                    </Link>
+                    <div className='relative'>
+                        <Link to="/cart" className="flex flex-col items-center no-underline text-inherit">
+                        <span className='absolute translate-x-2/3 -translate-y-2/4 bg-red-600 text-xs rounded-full w-4 h-4 text-white font-bold text-center'>{cartItems.length}</span>
+                            <Button label={<RiShoppingCart2Line className='text-xl' />} />
+                            <span className='text-sm'>Cart</span>
+                        </Link>
+
+                    </div>
 
                     <div className='flex flex-col items-center'>
                         <Button label={<RiSignpostLine className='text-xl' />} onClick={handleCart}></Button>
