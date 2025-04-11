@@ -12,6 +12,11 @@ const Cart = () => {
     const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
 
+    const Checkout = () => {
+        alert("Checkout is not available yet");
+    }
+
+
     return (
         <div>
             <Navigation />
@@ -83,7 +88,7 @@ const Cart = () => {
                             <Button
                                 className="bg-green-600 text-white p-4 w-60 rounded-md mt-6"
                                 label="Checkout"
-                                onClick={() => window.location.href = '/home'}
+                                onClick={Checkout}
                             />
 
                         </div>
