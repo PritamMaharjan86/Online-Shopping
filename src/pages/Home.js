@@ -11,21 +11,21 @@ const Home = () => {
             id: 1,
             name: "BenQ TK700 4K HDR Gaming Projector",
             price: 2395.93 ,
-            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1743488671/benq_monitor_rcqlfx.webp",
-            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1743590808/benq2951.logowik.com_ntllss.webp"
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1743488671/shopping_website/products/benq_monitor_rcqlfx.webp",
+            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1743590808/shopping_website/logos/benq2951.logowik.com_ntllss.webp"
         },
         {
             id: 2,
             name: "Philips NeoPix 113 Projector",
             price: 147,
-            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744186762/philips_rxbtti.webp",
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744186762/shopping_website/products/philips_rxbtti.webp",
             logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744189986/shopping_website/logos/Phillips_Logo_Design_History_Evolution_16_1024x1024_dcgmdl.webp"
         },
         {
             id: 3,
             name: "Samsung the Freestyle Projector",
             price: 1295,
-            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744186796/samsung_tgae71.webp",
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744186796/shopping_website/products/samsung_tgae71.webp",
             logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744190203/shopping_website/logos/Samsung-logo_mjoc1q.jpg"
         },
         {
