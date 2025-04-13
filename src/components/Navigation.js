@@ -14,13 +14,8 @@ const Navigation = () => {
     const { cartItems } = React.useContext(CartContext);
 
 
-
     const handleCart = () => {
         alert("Cart is empty");
-    }
-
-    const handleUser = () => {
-        alert("User not exists");
     }
 
     const handleStores = () => {
@@ -34,9 +29,10 @@ const Navigation = () => {
         <div>
             <div class="mx-auto flex h-20 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow shadow-none dark:-outline-offset-1 dark:outline-white/10">
                 <div>
-                    <div className="ml-8 text-3xl font-bold text-black uppercase font-Heading">PS Store</div>
-                    <a className="ml-12 text-black text-sm uppercase font-Title font-normal">all in one tech</a>
-
+                    <button onClick={() => window.location.href = '/home'}>
+                        <div className="ml-8 text-3xl font-bold text-black uppercase font-Heading">PS Tech</div>
+                        <a className="ml-12 text-black text-sm uppercase font-Title font-normal">all in one store</a>
+                    </button>
                 </div>
 
                 <div className='ml-auto flex items-center gap-x-8 mr-8'>
@@ -79,7 +75,6 @@ const Navigation = () => {
                         to="/home">
                         Products
                     </Link>
-
                     <Link
                         to="/contact">
                         Brands

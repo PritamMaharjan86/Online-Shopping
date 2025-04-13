@@ -10,7 +10,7 @@ const Home = () => {
         {
             id: 1,
             name: "BenQ TK700 4K HDR Gaming Projector",
-            price: 2395.93 ,
+            price: 2395.93,
             image: "https://res.cloudinary.com/dedpvue13/image/upload/v1743488671/shopping_website/products/benq_monitor_rcqlfx.webp",
             logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1743590808/shopping_website/logos/benq2951.logowik.com_ntllss.webp"
         },
@@ -34,9 +34,27 @@ const Home = () => {
             price: 1595,
             image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp",
             logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191457/shopping_website/logos/nebula-by-kryolan-logo-vector_fcx50u.png"
-        }
-
+        },
     ];
+
+    const offers = [
+        {
+            id: 1,
+            logo: 'https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp',
+            title: 'Samsung Mega Sale',
+            offer: 'Up to 40% off',
+            bgColor: 'bg-blue-200',
+        },
+        {
+            id: 2,
+            logo: 'https://res.cloudinary.com/dedpvue13/image/upload/v1744186796/shopping_website/products/samsung_tgae71.webp',
+            title: 'BenQ Bright Deals',
+            offer: 'Flat $100 Off',
+            bgColor: 'bg-pink-200',
+        },
+        // Add more...
+    ];
+
 
     const [buttonStates, setButtonStates] = useState({});
 
@@ -58,6 +76,19 @@ const Home = () => {
     return (
         <div>
             <Navigation />
+
+            <div className="flex overflow-x-auto gap-4 p-4">
+                {offers.map((item) => (
+                    <div key={item.id} className={`min-w-[250px] p-4 rounded-lg shadow-md ${item.bgColor}`}>
+                        <img src={item.logo} alt="brand" className="h-10 object-contain mb-2" />
+                        <h3 className="font-bold">{item.title}</h3>
+                        <p className="text-sm">{item.offer}</p>
+                    </div>
+                ))}
+            </div>
+
+
+
             <div className='flex flex-wrap justify-center items-center gap-3 p-6'>
                 {products.map(product => {
                     const state = buttonStates[product.id] || { text: "Add to Cart", isAdded: false };
