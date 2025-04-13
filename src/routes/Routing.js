@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from '../pages/Home';
 import ContactUs from '../pages/ContactUs';
 import Cart from '../pages/Cart';
+import Product from '../pages/Product';
 
 
 const Routing = () => {
@@ -11,7 +12,7 @@ const Routing = () => {
             <BrowserRouter>
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route path="/home" element={<Home />} />
+                    <Route path="/product" element={<Product />} />
                     <Route path="/contact" element={<ContactUs />} />
                     <Route path='/cart' element={<Cart />} />
                 </Routes>
