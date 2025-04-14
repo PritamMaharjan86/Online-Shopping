@@ -27,7 +27,7 @@ const Cart = () => {
                         <Button
                             className="bg-black text-white p-4 w-60 rounded-md m-5"
                             label="Continue Shopping"
-                            onClick={() => window.location.href = '/home'}
+                            onClick={() => window.location.href = '/'}
                         />
                     </div>
                 ) : (
@@ -81,7 +81,7 @@ const Cart = () => {
                             <Button
                                 className="bg-black text-white p-4 w-60 rounded-md mt-6"
                                 label="Continue Shopping"
-                                onClick={() => window.location.href = '/home'}
+                                onClick={() => window.location.href = '/'}
                             />
 
 

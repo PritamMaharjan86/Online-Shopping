@@ -6,7 +6,7 @@ import { CartProvider } from './context/Cartcontext'; // ✅ import the provider
 function App() {
   return (
     <Fragment>
-      <CartProvider> {/* ✅ wrap the app in the provider */}
+      <CartProvider> 
         <Routing />
       </CartProvider>
     </Fragment>
