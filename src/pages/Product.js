@@ -1,11 +1,12 @@
 import React from 'react'
-import Navigation from '../components/Navigation'
+import { Link } from 'react-router-dom'
 
 const products = [
     {
         id: 1,
         name: 'Desktops',
         image: 'https://res.cloudinary.com/dedpvue13/image/upload/v1744512503/shopping_website/products/desktop_o4dwq6.jpg',
+        path: 'desktop',
     },
     {
         id: 2,
@@ -61,6 +62,7 @@ const products = [
         id: 12,
         name: 'Projectors',
         image: 'https://res.cloudinary.com/dedpvue13/image/upload/v1744513454/shopping_website/products/projector_n9tgez.jpg',
+        path: 'projector',
     },
     {
         id: 13,
@@ -82,14 +84,13 @@ const products = [
 const Product = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-slate-100">
-            <Navigation />
 
             <div className='flex flex-wrap justify-center items-center gap-6 p-8'>
                 {products.map((product) => (
-                    <div
+                    <Link to={product.path}
                         key={product.id}
-                        className='bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 p-6 rounded-3xl w-60 flex flex-col items-center'
-                    >
+                        className='bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200 p-6 rounded-3xl w-60 flex flex-col items-center'>
+
                         <img
                             className='w-24 h-24 object-contain mb-4'
                             src={product.image}
@@ -98,7 +99,7 @@ const Product = () => {
                         <span className='text-lg font-semibold text-gray-800 text-center'>
                             {product.name}
                         </span>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
