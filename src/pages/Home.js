@@ -77,17 +77,6 @@ const Home = () => {
         <div>
             <Navigation />
 
-            <div className="flex overflow-x-auto gap-4 p-4">
-                {offers.map((item) => (
-                    <div key={item.id} className={`min-w-[250px] p-4 rounded-lg shadow-md ${item.bgColor}`}>
-                        <img src={item.logo} alt="brand" className="h-10 object-contain mb-2" />
-                        <h3 className="font-bold">{item.title}</h3>
-                        <p className="text-sm">{item.offer}</p>
-                    </div>
-                ))}
-            </div>
-
-
 
             <div className='flex flex-wrap justify-center items-center gap-3 p-6'>
                 {products.map(product => {
