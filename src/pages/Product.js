@@ -1,7 +1,9 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const products = [
+
+
     {
         id: 1,
         name: 'Desktops',
@@ -81,7 +83,15 @@ const products = [
     },
 ]
 
+
+
+
 const Product = () => {
+
+    useEffect(() => {
+        document.title = 'Products at PrimTech store';
+    }, []);
+
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-slate-100">
 
@@ -101,6 +111,15 @@ const Product = () => {
                         </span>
                     </Link>
                 ))}
+            </div>
+
+            <div className='flex flex-wrap justify-center items-center gap-6 p-8'>
+
+                <span className='font-bold text-4xl font-Title'>Hot Deals</span>
+
+                <div>
+
+                </div>
             </div>
         </div>
     )
