@@ -1,8 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Button from '../components/Button';
 import { CartContext } from '../context/Cartcontext';
 
 const Projector = () => {
+
+     useEffect(() => {
+            document.title = 'Projectors at PrimTech store';
+        }, []);
+
     const { addToCart } = useContext(CartContext);
 
     const products = [
@@ -52,6 +57,9 @@ const Projector = () => {
             }));
         }, 2000);
     };
+
+
+ 
 
     return (
         <div>
