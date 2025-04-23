@@ -32,13 +32,7 @@ const Projector = () => {
             image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744186796/shopping_website/products/samsung_tgae71.webp",
             logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744190203/shopping_website/logos/Samsung-logo_mjoc1q.jpg"
         },
-        {
-            id: 4,
-            name: "Nebula Capsule 3 Laser Google TV Projector",
-            price: 1595,
-            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp",
-            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191457/shopping_website/logos/nebula-by-kryolan-logo-vector_fcx50u.png"
-        },
+        
     ];
 
     const [buttonStates, setButtonStates] = useState({});
