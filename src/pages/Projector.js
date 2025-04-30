@@ -5,7 +5,7 @@ import { CartContext } from '../context/Cartcontext';
 const Projector = () => {
 
      useEffect(() => {
-            document.title = 'Project at PrimTech store';
+            document.title = 'Whats on the projector @ PrimTech Store';
         }, []);
 
     const { addToCart } = useContext(CartContext);
