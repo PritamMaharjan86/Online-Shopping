@@ -97,6 +97,10 @@ const Product = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-slate-100">
 
+            <Advertisement
+            // label={"hot deals"}
+            />
+
             <div className='flex flex-wrap justify-center items-center gap-6 p-8'>
                 {products.map((product) => (
                     <Link to={product.path}
@@ -115,7 +119,7 @@ const Product = () => {
                 ))}
             </div>
 
-           <Advertisement/>
+
         </div>
     )
 }

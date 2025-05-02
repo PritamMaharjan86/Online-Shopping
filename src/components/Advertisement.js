@@ -23,7 +23,7 @@ const ads = [
 
 
 
-const Advertisement = () => {
+const Advertisement = ({label}) => {
 
 
     const [currentAd, setCurrentAd] = useState(0);
@@ -31,7 +31,7 @@ const Advertisement = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentAd((prev) => (prev + 1) % ads.length);
-        }, 3000); // Change every 3 seconds
+        }, 3000);
         return () => clearInterval(interval);
     }, []);
 
@@ -39,7 +39,7 @@ const Advertisement = () => {
     return (
         <div className=' bg-yellow'>
             <div className="flex flex-col items-center gap-6 p-8 w-10/12 mx-auto ">
-                <span className='font-bold text-4xl font-Title p-2'>Hot Deals</span>
+                <span className='font-bold text-4xl font-Title'>{label}</span>
 
                 <div className="relative w-full max-w-4xl h-72">
                     {ads.map((ad, index) => (
