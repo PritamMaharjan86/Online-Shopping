@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import Advertisement from '../components/Advertisement'
 
@@ -118,6 +118,8 @@ const Product = () => {
                     </Link>
                 ))}
             </div>
+
+    
 
 
         </div>

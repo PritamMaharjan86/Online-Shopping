@@ -28,6 +28,11 @@ module.exports = {
       },
 
 
+      borderWidth:
+      {
+        '14': '14px',
+      },
+
     },
   },
   plugins: [],
