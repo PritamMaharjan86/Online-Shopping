@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Button from '../components/Button';
 import Navigation from '../components/Navigation';
 import { CartContext } from '../context/Cartcontext';
@@ -11,6 +11,9 @@ const Cart = () => {
     const { cartItems, addToCart, decreaseQuantity, removeFromCart } = useContext(CartContext);
     const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
+    useEffect(() => {
+        document.title = 'My Cart | PrimTech Store';
+    }, []);
 
     const Checkout = () => {
         alert("Checkout is not available yet");
