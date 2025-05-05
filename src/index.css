@@ -10,3 +10,7 @@
     @font-face {
         font-family: "Heading";
         src: url("../src/fonts/JB-Heading.ttf") format("truetype"); }
+
+        @font-face {
+            font-family: "Paragraph";
+            src: url("../src/fonts/CreatoDisplay-Regular.otf") format("truetype"); }
