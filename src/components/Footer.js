@@ -17,10 +17,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-200 border-t-8 border-yellow-400 px-6 py-10 text-black mt-20">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 justify-between">
+    <footer className="bg-gray-200 border-yellow-400 px-6 py-10 text-black mt-20 p-4 border-t-10 border-t-yellow">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 justify-between ">
         <section className="md:w-1/2">
-          <div className="flex items-center gap-4 mb-3">
+       
+          <div className="flex items-center gap-4 mb-3 ">
             <img
               className="w-12 h-12"
               src="https://res.cloudinary.com/dedpvue13/image/upload/v1726537260/extras/Ellipse_1_jivxjp.png"
