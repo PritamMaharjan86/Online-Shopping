@@ -5,7 +5,7 @@ import ContactUs from '../pages/ContactUs';
 import Cart from '../pages/Cart';
 import Product from '../pages/Product';
 import Desktop from '../pages/Desktop';
-import ProductLayout from '../Layout/ProductLayout';
+import PageLagout from '../Layout/PageLayout';
 import Projector from '../pages/Projector';
 
 
@@ -15,17 +15,14 @@ const Routing = () => {
             <BrowserRouter>
 
                 <Routes>
-                    <Route exact path="/" element={<Home />} />
-                    <Route path="/product" element={<ProductLayout />}>
+                    <Route path="/" element={<PageLagout />}>
+                        <Route exact path="/" element={<Home />} />
                         <Route index element={<Product />} />
                         <Route path="desktop" element={<Desktop />} />
                         <Route path="projector" element={<Projector />} />
-
+                        <Route path="/contact" element={<ContactUs />} />
+                        <Route path='/cart' element={<Cart />} />
                     </Route>
-
-                    <Route path="/contact" element={<ContactUs />} />
-                    <Route path='/cart' element={<Cart />} />
-
                 </Routes>
 
             </BrowserRouter>
