@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
 import Button from '../components/Button';
-import Navigation from '../components/Navigation';
 import { CartContext } from '../context/Cartcontext';
 import { MdDeleteForever } from "react-icons/md";
 import { IoIosAdd } from "react-icons/io";
@@ -22,7 +21,6 @@ const Cart = () => {
 
     return (
         <div>
-            <Navigation />
             <div className="p-4 items-center justify-center flex flex-col">
                 {cartItems.length === 0 ? (
                     <div className="flex flex-col items-center justify-center w-full h-96 rounded-md p-4">

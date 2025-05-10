@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import Navigation from '../components/Navigation';
 import Button from '../components/Button';
 import { CartContext } from '../context/Cartcontext';
 
@@ -37,25 +36,6 @@ const Home = () => {
         },
     ];
 
-    const offers = [
-        {
-            id: 1,
-            logo: 'https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp',
-            title: 'Samsung Mega Sale',
-            offer: 'Up to 40% off',
-            bgColor: 'bg-blue-200',
-        },
-        {
-            id: 2,
-            logo: 'https://res.cloudinary.com/dedpvue13/image/upload/v1744186796/shopping_website/products/samsung_tgae71.webp',
-            title: 'BenQ Bright Deals',
-            offer: 'Flat $100 Off',
-            bgColor: 'bg-pink-200',
-        },
-        // Add more...
-    ];
-
-
     const [buttonStates, setButtonStates] = useState({});
 
     const handleCart = (product) => {
@@ -75,9 +55,7 @@ const Home = () => {
 
     return (
         <div>
-            <Navigation />
-
-
+        
             <div className='flex flex-wrap justify-center items-center gap-3 p-6'>
                 {products.map(product => {
                     const state = buttonStates[product.id] || { text: "Add to Cart", isAdded: false };
