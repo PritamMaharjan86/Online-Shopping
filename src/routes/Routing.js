@@ -17,7 +17,7 @@ const Routing = () => {
                 <Routes>
                     <Route path="/" element={<PageLagout />}>
                         <Route exact path="/" element={<Home />} />
-                        <Route index element={<Product />} />
+                        <Route path='product' element={<Product />} />
                         <Route path="desktop" element={<Desktop />} />
                         <Route path="projector" element={<Projector />} />
                         <Route path="/contact" element={<ContactUs />} />
