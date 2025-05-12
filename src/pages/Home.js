@@ -34,6 +34,27 @@ const Home = () => {
             image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp",
             logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191457/shopping_website/logos/nebula-by-kryolan-logo-vector_fcx50u.png"
         },
+         {
+            id: 5,
+            name: "Nebula Capsule 3 Laser Google TV Projector",
+            price: 1595,
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp",
+            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191457/shopping_website/logos/nebula-by-kryolan-logo-vector_fcx50u.png"
+        },
+         {
+            id: 6,
+            name: "Nebula Capsule 3 Laser Google TV Projector",
+            price: 1595,
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp",
+            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191457/shopping_website/logos/nebula-by-kryolan-logo-vector_fcx50u.png"
+        },
+         {
+            id: 7,
+            name: "Nebula Capsule 3 Laser Google TV Projector",
+            price: 1595,
+            image: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191388/shopping_website/products/nebula_cnvard.webp",
+            logo: "https://res.cloudinary.com/dedpvue13/image/upload/v1744191457/shopping_website/logos/nebula-by-kryolan-logo-vector_fcx50u.png"
+        },
     ];
 
     const [buttonStates, setButtonStates] = useState({});
