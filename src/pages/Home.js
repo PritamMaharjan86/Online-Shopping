@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Button from '../components/Button';
 import { CartContext } from '../context/Cartcontext';
+import Advertisement from '../components/Advertisement';
 
 const Home = () => {
     const { addToCart } = useContext(CartContext);
@@ -76,8 +77,9 @@ const Home = () => {
 
     return (
         <div>
-        
+         <Advertisement />
             <div className='flex flex-wrap justify-center items-center gap-3 p-6'>
+               
                 {products.map(product => {
                     const state = buttonStates[product.id] || { text: "Add to Cart", isAdded: false };
                     return (
