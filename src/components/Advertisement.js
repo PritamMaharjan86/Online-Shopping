@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useState } from 'react';
 
 
@@ -23,7 +22,7 @@ const ads = [
 
 
 
-const Advertisement = ({label}) => {
+const Advertisement = ({ label }) => {
 
 
     const [currentAd, setCurrentAd] = useState(0);
@@ -37,25 +36,23 @@ const Advertisement = ({label}) => {
 
 
     return (
-        <div className=' bg-yellow'>
-            <div className="flex flex-col items-center gap-6 p-8 w-10/12 mx-auto ">
+        <div className='bg-yellow'>
+            <div className="flex flex-col items-center gap-6 p-8 w-10/12 mx-auto">
                 <span className='font-bold text-4xl font-Title'>{label}</span>
-
-                <div className="relative w-full max-w-4xl h-72">
+                <div className="relative w-full max-w-4xl h-72 z-10">
                     {ads.map((ad, index) => (
                         <img
                             key={ad.id}
                             src={ad.image}
                             alt={ad.alt}
-                            className={`absolute top-0 left-0 w-fit h-fit object-cover rounded-xl transition-opacity duration-1000 ease-in-out ${index === currentAd ? 'opacity-100' : 'opacity-0'
+                            className={`absolute top-0 left-0 w-full h-full object-cover rounded-xl transition-opacity duration-1000 ease-in-out ${index === currentAd ? 'opacity-100' : 'opacity-0'
                                 }`}
                         />
                     ))}
                 </div>
-
             </div>
-
         </div>
+
     )
 }
 

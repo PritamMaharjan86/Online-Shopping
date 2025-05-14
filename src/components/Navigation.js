@@ -26,7 +26,7 @@ const Navigation = () => {
 
 
     return (
-        <div>
+        <div className='sticky top-0 z-20'>
             <div class="mx-auto flex h-20 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow shadow-none dark:-outline-offset-1 dark:outline-white/10">
                 <div>
                     <button onClick={() => window.location.href = '/'}>
