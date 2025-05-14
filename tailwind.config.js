@@ -7,7 +7,7 @@ module.exports = {
       Title: ['Title', 'sans-serif'],
       Heading: ['Heading', 'sans-serif'],
       Paragraph: ['Paragraph', 'sans-serif'],
-
+    
     },
     extend: {
       colors:

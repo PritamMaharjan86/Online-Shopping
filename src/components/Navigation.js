@@ -26,51 +26,54 @@ const Navigation = () => {
 
 
     return (
-        <div className='sticky top-0 z-20'>
-            <div class="mx-auto flex h-20 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow shadow-none dark:-outline-offset-1 dark:outline-white/10">
-                <div>
-                    <button onClick={() => window.location.href = '/'}>
-                        <div className="ml-8 text-3xl font-bold text-black uppercase font-Heading">PrimTech</div>
-                        <a className="ml-12 text-black text-sm uppercase font-Title font-normal">all in one store</a>
-                    </button>
-                </div>
+        <>
+            <div className='sticky top-0 z-20 '>
+                <div class="flex h-16 p-10 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow shadow-none dark:-outline-offset-1 dark:outline-white/10">
+                    <div>
+                        <button onClick={() => window.location.href = '/'}>
+                            <div className="text-5xl font-bold text-black uppercase font-Heading">JB-HIFI</div>
+                            <a className=" text-black text-sm uppercase font-Title font-normal">always cheap prices</a>
+                        </button>
+                    </div>
 
-                <div className='ml-auto flex items-center gap-x-8 mr-8'>
-                    <Link to="/login">
+                    <div className='ml-auto flex items-center gap-x-8 mr-6 font-normal'>
+
                         <div className='flex flex-col items-center'>
-                            <Button label={<RiUserLine className='text-xl' />} />
-                            <span className='text-sm'>Login</span>
+                            <Button label={<RiSignpostLine className='text-xl' />} onClick={handleCart}></Button>
+                            <span className='text-sm'>Track order</span>
                         </div>
-                    </Link>
 
-                    <div className='flex flex-col items-center'>
-                        <Button label={<RiStore2Line className='text-xl' />} onClick={handleStores}></Button>
-                        <span className='text-sm'>Stores</span>
-                    </div>
+                        <div className='flex flex-col items-center'>
+                            <Button label={<RiStore2Line className='text-xl' />} onClick={handleStores}></Button>
+                            <span className='text-sm'>Stores</span>
+                        </div>
 
-                    <div className='relative'>
-                        <Link to="/cart" className="flex flex-col items-center no-underline text-inherit">
-                            {cartItems.length > 0 && (
-                                <span className='absolute top-0 right-0 translate-x-1/3 -translate-y-1/2 bg-red-600 text-xs rounded-full w-4 h-4 text-white font-bold text-center'>
-                                    {cartItems.length}
-                                </span>
-                            )}
-
-                            <Button label={<RiShoppingCart2Line className='text-xl' />} />
-                            <span className='text-sm'>Cart</span>
+                        <Link to="/login">
+                            <div className='flex flex-col items-center'>
+                                <Button label={<RiUserLine className='text-xl' />} />
+                                <span className='text-sm'>Log in</span>
+                            </div>
                         </Link>
+
+                        <div className='relative'>
+                            <Link to="/cart" className="flex flex-col items-center no-underline text-inherit">
+                                {cartItems.length > 0 && (
+                                    <span className='absolute top-0 right-0 translate-x-1/3 -translate-y-1/2 bg-red-600 text-xs rounded-full w-4 h-4 text-white font-bold text-center'>
+                                        {cartItems.length}
+                                    </span>
+                                )}
+
+                                <Button label={<RiShoppingCart2Line className='text-xl' />} />
+                                <span className='text-sm'>Cart</span>
+                            </Link>
+                        </div>
+
                     </div>
-
-
-                    <div className='flex flex-col items-center'>
-                        <Button label={<RiSignpostLine className='text-xl' />} onClick={handleCart}></Button>
-                        <span className='text-sm'>Delivery</span>
-                    </div>
-
                 </div>
+
             </div>
-            <div className="mx-auto flex max-w-full items-center gap-x-4 bg-black p-2 h-10 shadow-lg outline">
-                <ul className='text-white text-md flex justify-center space-x-12 m-1 ml-5 font-bold '>
+            <div className="mx-auto flex max-w-full items-center gap-x-4 bg-black p-2 h-10 shadow-lg outline ">
+                <ul className='text-white text-md flex justify-center space-x-12 m-1 ml-5 font-bold tracking-wide gap-2'>
                     <Link
                         to="/product">
                         Products
@@ -81,7 +84,7 @@ const Navigation = () => {
                     </Link>
                     <Link
                         to="/home">
-                        Deals & Offers
+                        Deals & Catalogues
                     </Link>
 
                     <Link
@@ -90,16 +93,28 @@ const Navigation = () => {
                     </Link>
                     <Link
                         to="/home">
+                        Services
+                    </Link>
+
+                    <Link
+                        to="/contact">
+                        Join JB Perks
+                    </Link>
+
+                    <Link
+                        to="/contact">
                         Gift Cards
                     </Link>
 
                     <Link
                         to="/contact">
-                        Join Us
+                        News & Reviews
                     </Link>
                 </ul>
             </div>
-        </div>
+        </>
+
+
     )
 }
 
