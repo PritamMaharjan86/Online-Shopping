@@ -6,6 +6,8 @@ import { RiUserLine } from "react-icons/ri";
 import { RiStore2Line } from "react-icons/ri";
 import { RiSignpostLine } from "react-icons/ri";
 import { CartContext } from '../context/Cartcontext';
+import SearchBar from './SearchBar';
+
 
 
 
@@ -31,10 +33,18 @@ const Navigation = () => {
                 <div class="flex h-16 p-10 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow shadow-none dark:-outline-offset-1 dark:outline-white/10">
                     <div>
                         <button onClick={() => window.location.href = '/'}>
-                            <div className="text-5xl font-bold text-black uppercase font-Heading">JB-HIFI</div>
-                            <a className=" text-black text-sm uppercase font-Title font-normal">always cheap prices</a>
+                            <div className="text-5xl font-bold text-black uppercase font-Heading">jb-hifi</div>
+                            <a className=" text-black text-sm uppercase font-Title">always cheap prices</a>
                         </button>
                     </div>
+
+                    <div className="flex justify-center items-center h-screen w-1/3">
+                        <div className=" w-full ml-20 mt-5">
+                            <SearchBar />
+                        </div>
+                    </div>
+
+
 
                     <div className='ml-auto flex items-center gap-x-8 mr-6 font-normal'>
 
