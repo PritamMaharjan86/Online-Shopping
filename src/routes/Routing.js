@@ -6,6 +6,7 @@ import Product from '../pages/Product';
 import Desktop from '../pages/Desktop';
 import PageLagout from '../Layout/PageLayout';
 import Projector from '../pages/Projector';
+import Login from "../pages/Login";
 
 
 const Routing = () => {
@@ -14,6 +15,7 @@ const Routing = () => {
             <BrowserRouter>
 
                 <Routes>
+                    <Route path="/login" element={<Login />} />
                     <Route path="/" element={<PageLagout />}>
                         <Route exact path="/" element={<Home />} />
                         <Route path='product' element={<Product />} />
