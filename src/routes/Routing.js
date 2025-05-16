@@ -20,7 +20,7 @@ const Routing = () => {
                         <Route exact path="/" element={<Home />} />
                         <Route path='product' element={<Product />} />
                         <Route path="desktop" element={<Desktop />} />
-                        <Route path="projector" element={<Projector />} />
+                        <Route path="product/projector" element={<Projector />} />
                         <Route path="/contact" element={<ContactUs />} />
                         <Route path='/cart' element={<Cart />} />
                     </Route>

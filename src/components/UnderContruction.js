@@ -5,12 +5,12 @@ const UnderConstruction = () => {
         <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
 
 
-            <div className="relative w-0 h-0 border-l-[70px] border-r-[70px] border-b-[120px] border-l-transparent border-r-transparent border-b-black animate-bounce">
+            <div className="relative w-0 h-0 border-l-[70px] border-r-[70px] border-b-[120px] border-l-transparent border-r-transparent border-b-orange-500 animate-bounce">
 
                 <div className="absolute top-[6px] left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[60px] border-r-[60px] border-b-[100px] border-l-transparent border-r-transparent border-b-white z-0" />
 
 
-                <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 translate-y-10 text-4xl font-black text-orange-400 z-10">
+                <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 translate-y-10 text-4xl font-black text-black z-10">
                     !
                 </div>
             </div>
@@ -26,7 +26,7 @@ const UnderConstruction = () => {
             </p>
 
 
-            <div className="mt-8 w-16 h-16 border-4 border-orange-400 border-t-transparent rounded-full animate-spin"></div>
+            <div className="mt-8 w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
     );
 };

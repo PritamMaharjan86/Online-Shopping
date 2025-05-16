@@ -32,10 +32,14 @@ const Navigation = () => {
             <div className='sticky top-0 z-20 '>
                 <div class="flex h-16 p-10 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow shadow-none dark:-outline-offset-1 dark:outline-white/10">
                     <div>
-                        <button onClick={() => window.location.href = '/'}>
+                        <button
+                            onClick={() => (window.location.href = '/')}
+                            className="text-left"
+                        >
                             <div className="text-5xl font-bold text-black uppercase font-Heading">jb-hifi</div>
-                            <a className=" text-black text-sm uppercase font-Title">always cheap prices</a>
+                            <div className="text-black text-sm uppercase font-Title">always cheap prices</div>
                         </button>
+
                     </div>
 
                     <div className="flex justify-center items-center h-screen w-1/3">
