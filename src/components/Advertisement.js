@@ -27,31 +27,41 @@ const Advertisement = ({ label }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentAd((prev) => (prev + 1) % ads.length);
-        }, 3000);
+        }, 4000);
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <div className="bg-yellow" >
-            <div className="flex flex-col items-center gap-6 p-8 w-10/12 mx-auto" >
+        <div className="bg-yellow p-10">
+            <div className="pt-10">
                 <span className="font-bold text-4xl font-Title">{label}</span>
-                <div className="relative overflow-hidden w-full max-w-4xl h-full border-2 bg-yellow border-black shadow-[2px_2px_0px_0px_rgb(0,0,0)]" >
+
+                <div className="w-full overflow-hidden">
                     <div
                         className="flex transition-transform duration-700 ease-in-out"
                         style={{ transform: `translateX(-${currentAd * 100}%)` }}
                     >
                         {ads.map((ad) => (
-                            <img
+                            <div
                                 key={ad.id}
-                                src={ad.image}
-                                alt={ad.alt}
-                                className="w-full flex-shrink-0 h-full object-cover"
-                            />
+                                className="w-full flex justify-center flex-shrink-0"
+                            >
+                                <div className="relative w-full max-w-4xl h-full border-2 border-black bg-yellow shadow-[2px_2px_0px_0px_rgb(0,0,0)]">
+                                    <img
+                                        src={ad.image}
+                                        alt={ad.alt}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </div>
             </div>
         </div>
+
+
+
     );
 };
 
