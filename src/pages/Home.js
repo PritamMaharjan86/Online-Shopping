@@ -1,10 +1,15 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Button from '../components/Button';
 import { CartContext } from '../context/Cartcontext';
 import Advertisement from '../components/Advertisement';
 
 const Home = () => {
     const { addToCart } = useContext(CartContext);
+
+    useEffect(() => {
+        document.title = `Primtech Store - Nepal's largest tech store`;
+    }, []);
+
 
     const products = [
         {

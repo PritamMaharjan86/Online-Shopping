@@ -1,20 +1,18 @@
 import { Link } from 'react-router-dom'
 import Button from './Button'
-import React from 'react'
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { RiUserLine } from "react-icons/ri";
 import { RiStore2Line } from "react-icons/ri";
 import { RiSignpostLine } from "react-icons/ri";
 import { CartContext } from '../context/Cartcontext';
 import SearchBar from './SearchBar';
-
-
-
+import React, { useState, useEffect } from 'react';
 
 const Navigation = () => {
 
     const { cartItems } = React.useContext(CartContext);
-
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const handleCart = () => {
         alert("Cart is empty");
@@ -24,20 +22,36 @@ const Navigation = () => {
         alert("Stores are closed");
     }
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentY = window.scrollY;
+
+            if (currentY < lastScrollY - 10) {
+                setShowNavbar(true); // Scroll up
+            } else if (currentY > lastScrollY + 10) {
+                setShowNavbar(false); // Scroll down
+            }
+
+            setLastScrollY(currentY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
 
 
 
     return (
         <>
             <div className='sticky top-0 z-20 '>
-                <div class="flex h-16 p-10 max-w-full items-center gap-x-4 outline outline-black/5 bg-yellow shadow-none dark:-outline-offset-1 dark:outline-white/10">
+                <div class="flex h-16 p-10 max-w-full items-center gap-x-4 bg-yellow">
                     <div>
                         <button
                             onClick={() => (window.location.href = '/')}
                             className="text-left"
                         >
-                            <div className="text-5xl font-bold text-black uppercase font-Heading">jb-hifi</div>
-                            <div className="text-black text-sm uppercase font-Title">always cheap prices</div>
+                            <div className="text-5xl font-bold text-black uppercase font-Heading">primtech</div>
+                            <div className="text-black text-sm uppercase font-Title">your tech center</div>
                         </button>
 
                     </div>
@@ -86,7 +100,8 @@ const Navigation = () => {
                 </div>
 
             </div>
-            <div className="mx-auto flex max-w-full items-center gap-x-4 bg-black p-2 h-10 shadow-lg outline ">
+            <div className={`p-2 mx-auto flex max-w-full items-center gap-x-4 bg-black h-10 shadow-lg fixed left-0 z-10 w-full transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'
+                }`}>
                 <ul className='text-white text-md flex justify-center space-x-12 m-1 ml-5 font-bold tracking-wide gap-2'>
                     <Link
                         to="/product">
